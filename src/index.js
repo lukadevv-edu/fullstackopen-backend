@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 3001;
 // Routes
 
 {
-  app.get("/api/persons", (_request, response, next) => {
+  app.get("/api/persons", (_request, response) => {
     Person.find({}).then((people) => {
       response.json(people);
     });
